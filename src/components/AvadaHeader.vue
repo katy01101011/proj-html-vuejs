@@ -1,7 +1,22 @@
 <template>
   <div>
     <!-- class="menuList show" -->
-    <AvadaMenuList :links="menuLinks" />
+    <div class="menuList" :class="{show: iconClicked}">
+      <div>
+        <button @click="menuClicked">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul>
+        <li
+          v-for="(link, index) in menuLinks"
+          :key="index"
+          :class="{ activeListItem: link.linkClicked === true }"
+        >
+          {{ link.name }}
+        </li>
+      </ul>
+    </div>
     <header id="top" :class="{ active: scrolled() }">
       <div class="header">
         <a href="">
@@ -28,12 +43,10 @@
 </template>
 
 <script>
-import AvadaMenuList from "./AvadaMenuList.vue";
 
 export default {
   name: "AvadaHeader",
   components: {
-    AvadaMenuList,
   },
   data() {
     return {
@@ -79,11 +92,9 @@ export default {
     };
   },
   methods: {
-    // menuClicked() {
-    //   this.iconClicked = true;
-    //   if ((this.iconClicked = true)) {
-    //   }
-    // },
+    menuClicked() {
+      this.iconClicked = !this.iconClicked;
+    },
 
     menuEvents() {
       event.preventDefault();
@@ -113,10 +124,57 @@ export default {
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 1001;
-  background-color: black;
+  z-index: 10001;
+  background-color: $header-bg;
   color: white;
+  font-size: 1.5rem;
   display: none;
+
+  button {
+    border: none;
+    background-color: transparent;
+    margin: 0.6rem 0.8rem;
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: inherit;
+    transition: 0.7s;
+  }
+
+  button:hover {
+    color: $text-hover;
+    transition: 0.7s;
+  }
+
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 100%;
+      text-align: center;
+      margin: 0.25rem;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 0.7s;
+    }
+
+    li:hover {
+      color: $text-hover;
+      transition: 0.7s;
+    }
+
+    .activeListItem {
+      color: $text-hover;
+    }
+  }
 
   button {
     border: none;
@@ -144,9 +202,9 @@ export default {
   }
 }
 
-// .show {
-//   display: block;
-// }
+.show {
+  display: block;
+}
 
 .active {
   height: $header-active-height;
