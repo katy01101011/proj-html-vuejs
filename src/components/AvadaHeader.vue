@@ -250,6 +250,12 @@ header {
 
         i {
           font-size: 1rem;
+          transition: .6s;
+        }
+
+        i:hover {
+          color: $text-hover;
+          transition: .6s;
         }
       }
 

@@ -29,6 +29,7 @@ section {
   background-repeat: no-repeat;
   padding-top: $header-height;
   color: white;
+      overflow: hidden;
 
   .shop {
     height: calc(100vh - $header-height);
@@ -36,6 +37,7 @@ section {
     justify-content: space-between;
     position: relative;
     transform: translateY(-20vh);
+    position: relative;
 
     &__text {
       position: relative;
@@ -62,20 +64,15 @@ section {
         color: $text-details;
         margin-bottom: 2.5rem;
       }
-
-      button {
-        background-color: transparent;
-        border: 2px solid $text-secondary;
-        color: $text-secondary;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        padding: 1rem 2.4rem;
-      }
     }
 
     &__image {
       margin-top: 1rem;
-      width: 38vw;
+      width: 600px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -10;
     }
   }
 }
