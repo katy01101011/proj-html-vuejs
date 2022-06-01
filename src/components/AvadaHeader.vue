@@ -225,7 +225,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 79%;
+    width: 70%;
     margin: 0 auto;
     height: 100%;
 

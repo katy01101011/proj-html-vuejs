@@ -6,9 +6,6 @@
         <h3>The Pinnacle of Male Grooming</h3>
         <button>Learn More</button>
       </div>
-      <div class="shop__image">
-        <img src="../assets/avadabarbers_hero_focalmirror.png" alt="" />
-      </div>
     </div>
   </section>
 </template>
@@ -27,7 +24,6 @@ section {
   background-image: url(../assets/avadabarbers-homepage-hero-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: $header-height;
   color: white;
       overflow: hidden;
 
@@ -40,13 +36,22 @@ section {
     position: relative;
 
     &__text {
+      width: 100%;
+        padding-top: $header-height;
+
       position: relative;
       top: 30vh;
+
+      background-image: url(../assets/avadabarbers_hero_focalmirror.png);
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: right;
 
       h1 {
         font-family: "Abril Fatface", cursive;
         font-weight: 100;
         font-size: 5.6rem;
+        color: $ebb-light-gray;
       }
 
       h1::after {
@@ -64,15 +69,6 @@ section {
         color: $text-details;
         margin-bottom: 2.5rem;
       }
-    }
-
-    &__image {
-      margin-top: 1rem;
-      width: 600px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: -10;
     }
   }
 }

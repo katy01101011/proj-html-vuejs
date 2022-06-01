@@ -10,7 +10,7 @@ img {
 }
 
 .container {
-  width: 79%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -41,9 +41,37 @@ h2 {
   color: #b0b0b0;
 }
 
+h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #ae8d67;
+  margin: 1.5rem 0 2rem;
+}
+
 h4 {
   text-transform: uppercase;
   font-size: 1rem;
   color: #ae8d67;
   letter-spacing: 2px;
+}
+
+h5 {
+  color: #ae8d67;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  color: #69625c;
+  line-height: 2rem;
+}
+
+span {
+  font-size: .8rem;
+  color: #ae8d67;
+  margin-top: 1rem;
 }

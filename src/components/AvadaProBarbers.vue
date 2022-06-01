@@ -24,7 +24,7 @@ section {
   background-repeat: no-repeat;
 
   .pro {
-    padding: 6rem 0 16rem;
+    padding: 6rem 0 8rem;
     text-align: center;
 
     h2 {

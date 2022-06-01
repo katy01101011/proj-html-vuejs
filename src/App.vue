@@ -4,12 +4,14 @@
     <main>
       <AvadaBarberShop />
       <AvadaProBarbers />
-      <AvadaSection />
+      <div id="triangleUp"></div>
+      <AvadaSection :servicesCards="services" />
+      <div id="triangleUpBlack"></div>
       <AvadaProducts />
       <AvadaMonthsProduct />
       <AvadaReviews />
-      <AvadaSection />
-      <AvadaSection />
+      <div id="triangleDown"></div>
+      <AvadaSection :postsCards="posts" style="background-color: #eae8e6" />
     </main>
     <AvadaFooter />
   </div>
@@ -49,9 +51,43 @@ export default {
         {
           name: "menu",
           icon: "bars",
-        }
+        },
       ],
-    }
+      services: [
+        {
+          img: require("./assets/avadabarbers-trimcut-icon-before.png"),
+          title: "Trim & Cut",
+          text: "Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and ridiculously good looking.",
+        },
+        {
+          img: require("./assets/avadabarbers-washndry-icon.png"),
+          title: "Wash & Dry",
+          text: "Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion.",
+        },
+        {
+          img: require("./assets/avadabarbers-beardtrim-icon.png"),
+          title: "Beard Tidy",
+          text: "Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.",
+        },
+      ],
+      posts: [
+        {
+          img: require("./assets/avadabarbers-second-blog-320x202.jpg"),
+          title: "Avada Barbers Now Open",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,",
+        },
+        {
+          img: require("./assets/avadabarbers-choosing-blog-320x202.jpg"),
+          title: "Choosing The Right Barber",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,",
+        },
+        {
+          img: require("./assets/avadabarbers-ourservice-blog-320x202.jpg"),
+          title: "Quick Service Guide",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -63,20 +99,37 @@ export default {
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 #app {
-  * {
-    // font-family: "Abril Fatface", cursive;
-    // border: 1px solid black;
-  }
+  // font-family: "Abril Fatface", cursive;
 
   main {
     width: 100%;
-    height: 10000px;
     color: $text-primary;
-    background-color: orange;
   }
 
-  p {
-    font-family: "Lato", sans-serif;
+  #triangleUp {
+    width: 0;
+    height: 0;
+    border-left: 50vw solid $cod-gray-light-black;
+    border-right: 50vw solid $cod-gray-light-black;
+    border-bottom: 110px solid white;
   }
+
+    #triangleUpBlack {
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 110px solid $cod-gray-light-black;
+    margin-top: 5rem
+  }
+
+  #triangleDown {
+      width: 0;
+      height: 0;
+      border-left: 50vw solid $ebb-light-gray;
+      border-right: 50vw solid $ebb-light-gray;
+      border-top: 110px solid white;
+      padding-bottom: 2rem;
+    }
 }
 </style>
