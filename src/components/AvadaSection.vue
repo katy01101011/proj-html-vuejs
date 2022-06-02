@@ -7,7 +7,7 @@
         <AvadaSectionCard v-for="(card, index) in servicesCards" :key="index" :cardInfo="card"/>
       </div>
       <div class="cards" v-if="postsCards">
-        <AvadaSectionCard v-for="(card, index) in postsCards" :key="'abc' + index" :cardInfo="card"/>
+        <AvadaSectionCard v-for="(card, index) in postsCards" :key="'abc' + index" :cardInfo="card" :abc="abc" />
       </div>
       <button>Read about our blog</button>
     </div>
@@ -24,10 +24,8 @@ export default {
   props: {
     servicesCards: Array, 
     postsCards: Array,
+    abc: Boolean,
   },
-  created() {
-    console.log(this.servicesCards, this.postsCards);
-  }
 };
 </script>
 

@@ -11,7 +11,7 @@
       <AvadaMonthsProduct :monthProduct="monthProduct" />
       <AvadaReviews />
       <div id="triangleDown"></div>
-      <AvadaSection :postsCards="posts" style="background-color: #eae8e6" />
+      <AvadaSection :postsCards="posts" style="background-color: #eae8e6" :abc="abc" />
     </main>
     <AvadaFooter />
   </div>
@@ -43,6 +43,7 @@ export default {
   },
   data() {
     return {
+      abc: true,
       menuIcons: [
         {
           name: "Shopping Cart",

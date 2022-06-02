@@ -1,7 +1,13 @@
 <template>
   <section>
-    <div class="section__card">
-      <img :src="cardInfo.img" alt="" :class="{imgPosts: posts}" />
+    <div class="section__card" :class="{ pad: abc }">
+      <div class="img-container" :class="{ big: abc }">
+        <img
+          :src="cardInfo.img"
+          alt=""
+          :class="{ imgPosts: posts, bigImg: abc }"
+        />
+      </div>
       <h3>
         {{ cardInfo.title }}
       </h3>
@@ -15,6 +21,7 @@ export default {
   name: "AvadaProBarbers",
   props: {
     cardInfo: Object,
+    abc: Boolean,
   },
 };
 </script>
@@ -22,11 +29,38 @@ export default {
 <style lang="scss" scoped>
 .section__card {
   padding: 0 3rem;
-  img {
-    height: 110px;
+
+  .img-container {
+    img {
+      height: 110px;
+    }
+
+    .imgPosts {
+      height: 200px;
+    }
   }
-  .imgPosts {
-    height: 200px;
+
+  .big {
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+margin: 0 auto;
+
+    .bigImg {
+      width: 100%;
+      height: auto;
+      transition: 1.5s;
+    }
+
+    .bigImg:hover {
+      transform: scale(120%);
+      opacity: 0.9;
+      transition: 1.5s;
+    }
   }
+}
+
+.pad {
+  padding: 0 0.5rem;
 }
 </style>
