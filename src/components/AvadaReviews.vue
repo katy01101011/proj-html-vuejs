@@ -16,7 +16,6 @@
 
 <script>
 import AvadaReviewsCard from "../components/AvadaReviewsCard.vue";
-
 export default {
   name: "AvadaReviews",
   components: {
@@ -51,11 +50,9 @@ section {
   width: 100%;
   text-align: center;
   padding: 6rem 0;
-
   h2 {
     margin-bottom: 3rem;
   }
-
   .reviews {
     display: flex;
     justify-content: space-between;

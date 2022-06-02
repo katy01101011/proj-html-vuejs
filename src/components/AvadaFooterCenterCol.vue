@@ -24,28 +24,23 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
-
 .centerCol {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   img {
     width: 200px;
     margin: 4rem 0 2rem;
   }
-
   span {
     color: $text-details;
     font-size: 1rem;
     line-height: 0.8rem;
   }
-
   .icons {
       margin: 1rem;
       text-align: center;
       margin-bottom: 4rem;
-
       a {
           padding: .3rem;
           margin: .3rem;
@@ -53,7 +48,6 @@ export default {
           font-size: 1.1rem;
       }
   }
-
   h6 {
       margin: 2.5rem 0 2rem;
   }

@@ -23,7 +23,6 @@ export default {
     .card {
         text-align: center;
         padding: 0 3rem;
-
         img {
           width: 120px;
           border-radius: 50%;

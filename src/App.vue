@@ -8,7 +8,7 @@
       <AvadaSection :servicesCards="services" />
       <div id="triangleUpBlack"></div>
       <AvadaProducts />
-      <AvadaMonthsProduct />
+      <AvadaMonthsProduct :monthProduct="monthProduct" />
       <AvadaReviews />
       <div id="triangleDown"></div>
       <AvadaSection :postsCards="posts" style="background-color: #eae8e6" />
@@ -87,6 +87,12 @@ export default {
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,",
         },
       ],
+      monthProduct: {
+        image: require("./assets/shaving_butter-400x400.png"),
+        name: "Shaving Butter",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet enim est, vel molestie dolor ultrices ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
     };
   },
 };
@@ -114,22 +120,32 @@ export default {
     border-bottom: 110px solid white;
   }
 
-    #triangleUpBlack {
+  #triangleUpBlack {
     width: 0;
     height: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
     border-bottom: 110px solid $cod-gray-light-black;
-    margin-top: 5rem
+    margin-top: 5rem;
   }
 
   #triangleDown {
-      width: 0;
-      height: 0;
-      border-left: 50vw solid $ebb-light-gray;
-      border-right: 50vw solid $ebb-light-gray;
-      border-top: 110px solid white;
-      padding-bottom: 2rem;
-    }
+    width: 0;
+    height: 0;
+    border-left: 50vw solid $ebb-light-gray;
+    border-right: 50vw solid $ebb-light-gray;
+    border-top: 110px solid white;
+    padding-bottom: 2rem;
+  }
+
+  #up {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+  }
 }
 </style>

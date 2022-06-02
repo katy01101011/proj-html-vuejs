@@ -59,19 +59,15 @@ section {
   background-repeat: no-repeat;
   text-align: center;
   padding: 6rem 0;
-
   .container {
     width: 84%;
-
     h2 {
       margin-bottom: 3rem;
     }
-
     .products {
       display: flex;
       justify-content: space-between;
     }
-
     button {
         margin-top: 5rem;
         margin-bottom: 5rem;

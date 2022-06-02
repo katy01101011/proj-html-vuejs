@@ -43,7 +43,6 @@
 </template>
 
 <script>
-
 export default {
   name: "AvadaHeader",
   components: {
@@ -95,11 +94,9 @@ export default {
     menuClicked() {
       this.iconClicked = !this.iconClicked;
     },
-
     menuEvents() {
       event.preventDefault();
     },
-
     // Questo sarebbe da fare con il computed
     scrolled() {
       window.onscroll = function () {
@@ -119,7 +116,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
-
 .menuList {
   width: 100%;
   height: 100vh;
@@ -129,7 +125,6 @@ export default {
   color: white;
   font-size: 1.5rem;
   display: none;
-
   button {
     border: none;
     background-color: transparent;
@@ -143,12 +138,10 @@ export default {
     font-size: inherit;
     transition: 0.7s;
   }
-
   button:hover {
     color: $text-hover;
     transition: 0.7s;
   }
-
   ul {
     width: 100%;
     height: 100%;
@@ -156,7 +149,6 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     li {
       width: 100%;
       text-align: center;
@@ -165,17 +157,14 @@ export default {
       cursor: pointer;
       transition: 0.7s;
     }
-
     li:hover {
       color: $text-hover;
       transition: 0.7s;
     }
-
     .activeListItem {
       color: $text-hover;
     }
   }
-
   button {
     border: none;
     background-color: transparent;
@@ -187,7 +176,6 @@ export default {
     top: 0;
     right: 0;
   }
-
   ul {
     width: 100%;
     height: 100%;
@@ -195,23 +183,19 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     li {
       padding: 1rem;
     }
   }
 }
-
 .show {
   display: block;
 }
-
 .active {
   height: $header-active-height;
   background-color: $header-bg;
   transition: 0.7s;
 }
-
 header {
   width: 100%;
   height: $header-height;
@@ -220,7 +204,6 @@ header {
   top: 0;
   left: 0;
   transition: 0.7s;
-
   .header {
     display: flex;
     justify-content: space-between;
@@ -228,13 +211,11 @@ header {
     width: 70%;
     margin: 0 auto;
     height: 100%;
-
     nav {
       width: auto;
       height: auto;
       display: flex;
       align-items: center;
-
       button {
         border: none;
         background-color: transparent;
@@ -244,21 +225,17 @@ header {
         padding: 0.5rem 0 0.5rem 0.5rem;
         display: flex;
       }
-
       .cart {
         color: $white;
-
         i {
           font-size: 1rem;
           transition: .6s;
         }
-
         i:hover {
           color: $text-hover;
           transition: .6s;
         }
       }
-
       .menu {
         color: $teak-brown;
       }

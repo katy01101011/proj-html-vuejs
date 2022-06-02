@@ -1,3 +1,4 @@
+
 <template>
   <section>
     <div class="pro container">
@@ -17,16 +18,13 @@ export default {
 <style lang="scss" scoped>
 @import "../style/general.scss";
 @import "../style/variables";
-
 section {
   background-image: url(../assets/avadabarbers-about-introbackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
   .pro {
     padding: 6rem 0 8rem;
     text-align: center;
-
     h2 {
         margin-bottom: 1.5rem;
     }

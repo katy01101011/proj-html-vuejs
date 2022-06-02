@@ -19,7 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
-
 section {
   height: 100vh;
   background-image: url(../assets/avadabarbers-homepage-hero-bg.jpg);
@@ -28,30 +27,25 @@ section {
   color: white;
   overflow: hidden;
   position: relative;
-
       //   background-image: url(../assets/avadabarbers_hero_focalmirror.png);
       // background-size: 40%;
       // background-repeat: no-repeat;
       // background-position: right;
-
   .shop {
     height: calc(100vh - $header-height);
     display: flex;
     justify-content: space-between;
     transform: translateY(-20vh);
-
     &__text {
       width: 100%;
       padding-top: $header-height;
       padding-top: 45vh;
-
       h1 {
         font-family: "Abril Fatface", cursive;
         font-weight: 100;
         font-size: 5.6rem;
         color: $ebb-light-gray;
       }
-
       h1::after {
         content: "";
         display: block;
@@ -61,14 +55,12 @@ section {
         height: 4.5px;
         background-color: $text-secondary;
       }
-
       h3 {
         font-size: 1.5rem;
         color: $text-details;
         margin-bottom: 2.5rem;
       }
     }
-
     img {
       height: 80vh;
       position: absolute;

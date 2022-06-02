@@ -18,7 +18,6 @@
 <script>
 import AvadaFooterSideCol from "../components/AvadaFooterSideCol.vue";
 import AvadaFooterCenterCol from "../components/AvadaFooterCenterCol.vue";
-
 export default {
   name: "AvadaFooter",
   components: {
@@ -62,12 +61,10 @@ export default {
 footer {
   color: white;
   background-color: black;
-
   .top {
     display: flex;
     justify-content: space-between;
   }
-
   .bottom {
       height: $footer-bottom-height;
       line-height: $footer-bottom-height;
@@ -77,7 +74,6 @@ footer {
       span {
         color: $text-details;
         font-size: .85rem;
-
         a {
           color: $text-secondary;
           text-decoration: none;

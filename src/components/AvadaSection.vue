@@ -16,7 +16,6 @@
 
 <script>
 import AvadaSectionCard from "../components/AvadaSectionCard.vue";
-
 export default {
   name: "AvadaSection",
   components: {
@@ -37,7 +36,6 @@ section {
   width: 100%;
   padding: 5rem 0;
   text-align: center;
-
   .cards {
     width: 100%;
     display: flex;

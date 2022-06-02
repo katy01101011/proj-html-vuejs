@@ -26,7 +26,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
-
 .product {
   background-color: black;
   border-top: 4px solid $teak-brown;
@@ -34,7 +33,6 @@ export default {
   bottom: 50px;
   display: flex;
   height: calc(27vw + 4px);
-
   &__image {
     background-image: url(../assets/avadabarbers-cta-background.jpg);
     background-size: cover;
@@ -47,13 +45,10 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-
   }
-
   &__text {
     padding: 3.5rem;
       overflow-y: scroll;
-
     p {
       padding: 1.5rem 0;
       color: $text-details;

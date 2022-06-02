@@ -22,11 +22,9 @@ export default {
 <style lang="scss" scoped>
 .section__card {
   padding: 0 3rem;
-
   img {
     height: 110px;
   }
-
   .imgPosts {
     height: 200px;
   }
