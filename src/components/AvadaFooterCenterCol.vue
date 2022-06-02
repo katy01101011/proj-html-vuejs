@@ -5,7 +5,7 @@
       {{ text }}
     </span>
     <div class="icons">
-        <h6>Follow us</h6>
+      <h6>Follow us</h6>
       <a v-for="(icon, i) in centerData.social" :key="i">
         <i class="fab" :class="icon"></i>
       </a>
@@ -38,18 +38,19 @@ export default {
     line-height: 0.8rem;
   }
   .icons {
-      margin: 1rem;
-      text-align: center;
-      margin-bottom: 4rem;
-      a {
-          padding: .3rem;
-          margin: .3rem;
-          color: $text-details;
-          font-size: 1.1rem;
-      }
+    margin: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    a {
+      padding: 0.3rem;
+      margin: 0.3rem;
+      color: $text-details;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
   }
   h6 {
-      margin: 2.5rem 0 2rem;
+    margin: 2.5rem 0 2rem;
   }
 }
 </style>

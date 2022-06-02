@@ -31,6 +31,8 @@ export default {
   padding: 0 3rem;
 
   .img-container {
+  cursor: pointer;
+
     img {
       height: 110px;
     }
@@ -44,7 +46,7 @@ export default {
     width: 85%;
     height: auto;
     overflow: hidden;
-margin: 0 auto;
+    margin: 0 auto;
 
     .bigImg {
       width: 100%;

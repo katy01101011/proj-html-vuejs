@@ -106,7 +106,6 @@ export default {
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 #app {
-  // font-family: "Abril Fatface", cursive;
 
   main {
     width: 100%;

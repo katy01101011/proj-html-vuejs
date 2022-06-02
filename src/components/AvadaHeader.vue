@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- class="menuList show" -->
-    <div class="menuList" :class="{show: iconClicked}">
+    <div id="ok" class="menuList" :class="{ show: iconClicked }">
       <div>
         <button @click="menuClicked">
           <i class="fas fa-times"></i>
@@ -45,8 +45,7 @@
 <script>
 export default {
   name: "AvadaHeader",
-  components: {
-  },
+  components: {},
   data() {
     return {
       iconClicked: false,
@@ -161,6 +160,9 @@ export default {
       color: $text-hover;
       transition: 0.7s;
     }
+    // li:hover .menuList {
+    //   background-color: red;
+    // }
     .activeListItem {
       color: $text-hover;
     }
@@ -229,11 +231,11 @@ header {
         color: $white;
         i {
           font-size: 1rem;
-          transition: .6s;
+          transition: 0.6s;
         }
         i:hover {
           color: $text-hover;
-          transition: .6s;
+          transition: 0.6s;
         }
       }
       .menu {
